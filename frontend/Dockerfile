@@ -1,4 +1,4 @@
-# Stage 1: Build the Next.js application
+# Build stage
 FROM node:18 AS builder
 
 WORKDIR /usr/src/app
@@ -12,7 +12,7 @@ COPY . .
 RUN npm run build
 RUN npm prune --production
 
-# Stage 2: Serve the Next.js application
+# Production stage
 FROM node:18
 
 WORKDIR /usr/src/app
