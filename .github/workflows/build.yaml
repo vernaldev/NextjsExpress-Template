@@ -1,3 +1,4 @@
+{% raw %}
 name: Build & Push Docker Container
 on:
   push:
@@ -39,3 +40,4 @@ jobs:
         cache-from: type=registry,ref=ghcr.io/${{ github.repository }}_frontend:latest
         cache-to: type=inline
         tags: ghcr.io/${{ github.repository }}_frontend:latest
+{% endraw %}
