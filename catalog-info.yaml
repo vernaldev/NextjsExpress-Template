@@ -3,7 +3,6 @@ kind: Component
 metadata:
   name: ${{ values.name | dump }}
   annotations:
-    backstage.io/kubernetes-id: ${{ values.name | dump }}
     backstage.io/techdocs-ref: dir:.
     grafana/overview-dashboard: https://grafana.local.lan.vernal.dev/d/_KEgCD1Gz/kubernetes?orgId=1
   links:
