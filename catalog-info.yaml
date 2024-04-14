@@ -8,7 +8,7 @@ metadata:
   links:
   {% for component in values.components %}
   - title: ${{ component }}
-    url: ${{ component }}-${{ values.name }}-${{ values.owner | replace(":", "-") | replace("/", "-") }}-app.local.lan.vernal.dev
+    url: https://${{ component }}-${{ values.name }}-${{ values.owner | replace(":", "-") | replace("/", "-") }}-app.local.lan.vernal.dev
   {% endfor %}
 spec:
   type: service
