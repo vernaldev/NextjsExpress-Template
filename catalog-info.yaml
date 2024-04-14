@@ -5,6 +5,11 @@ metadata:
   annotations:
     backstage.io/techdocs-ref: dir:.
     grafana/overview-dashboard: https://grafana.local.lan.vernal.dev/d/_KEgCD1Gz/kubernetes?orgId=1
+  links:
+  {% for component in values.components %}
+  - title: ${{ component }}
+    url: ${{ component }}-${{ values.name }}-${{ values.owner | replace(":", "-") | replace("/", "-") }}-app.local.lan.vernal.dev
+  {% endfor %}
 spec:
   type: service
   owner: ${{ values.owner | dump }}
