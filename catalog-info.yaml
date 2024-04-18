@@ -6,6 +6,7 @@ metadata:
     backstage.io/kubernetes-id: ${{ values.name | dump }}
     backstage.io/techdocs-ref: dir:.
     grafana/overview-dashboard: https://grafana.local.lan.vernal.dev/d/X6mdr1hnz/loki?orgId=1
+    github.com/project-slug: ${{ values.projectSlug | dump }}
   links:
   {% for component in values.components %}
   - title: ${{ component }}
