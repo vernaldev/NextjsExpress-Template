@@ -12,6 +12,9 @@ metadata:
   - title: ${{ component }}
     url: https://${{ component }}-${{ values.name }}-${{ values.owner | replace(":", "-") | replace("/", "-") }}-app.local.lan.vernal.dev
   {% endfor %}
+  - url: https://app.snyk.io/org/vernaldev
+    title: Snyk
+    icon: Dashboard
 spec:
   type: service
   owner: ${{ values.owner | dump }}
