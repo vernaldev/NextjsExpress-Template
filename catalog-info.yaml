@@ -6,11 +6,15 @@ metadata:
     backstage.io/kubernetes-id: ${{ values.name | dump }}
     backstage.io/techdocs-ref: dir:.
     grafana/overview-dashboard: https://grafana.local.lan.vernal.dev/d/X6mdr1hnz/loki?orgId=1
+    github.com/project-slug: ${{ values.projectSlug | dump }}
   links:
   {% for component in values.components %}
   - title: ${{ component }}
     url: https://${{ component }}-${{ values.name }}-${{ values.owner | replace(":", "-") | replace("/", "-") }}-app.local.lan.vernal.dev
   {% endfor %}
+  - url: https://app.snyk.io/org/vernaldev
+    title: Snyk
+    icon: Dashboard
 spec:
   type: service
   owner: ${{ values.owner | dump }}
